@@ -10,18 +10,18 @@ import { ChallengeModal } from '@/components/challenge-modal'
 
 // Dados mockados das quadras (MANTIDOS)
 const courts = [
-  { id: '1', name: 'Arena Central', location: 'São Paulo - SP', rating: 4.9, image: 'https://images.unsplash.com/photo-1624880357913-a8539238245b?w=400&h=300&fit=crop' },
-  { id: '2', name: 'Grama Premium', location: 'Rio de Janeiro - RJ', rating: 4.8, image: 'https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=400&h=300&fit=crop' },
-  { id: '3', name: 'Soccer Zone', location: 'Belo Horizonte - MG', rating: 4.7, image: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=400&h=300&fit=crop' },
-  { id: '4', name: 'Arena Praiana', location: 'Salvador - BA', rating: 4.9, image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop' },
+  { id: '1', name: 'Quadra A', location: 'Região Central', rating: 4.9, image: 'https://images.unsplash.com/photo-1624880357913-a8539238245b?w=400&h=300&fit=crop' },
+  { id: '2', name: 'Quadra B', location: 'Região Sul', rating: 4.8, image: 'https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=400&h=300&fit=crop' },
+  { id: '3', name: 'Quadra C', location: 'Região Norte', rating: 4.7, image: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=400&h=300&fit=crop' },
+  { id: '4', name: 'Quadra D', location: 'Região Leste', rating: 4.9, image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop' },
 ]
 
 // Dados mockados dos times (MANTIDOS)
 const teams = [
-  { id: '1', name: 'Fúria FC', level: 'Amador' as const, players: 8, maxPlayers: 10, logo: '' },
-  { id: '2', name: 'United Team', level: 'Semi-Pro' as const, players: 9, maxPlayers: 10, logo: '' },
-  { id: '3', name: 'Galácticos', level: 'Amador' as const, players: 7, maxPlayers: 10, logo: '' },
-  { id: '4', name: 'Vila FC', level: 'Profissional' as const, players: 10, maxPlayers: 10, logo: '' },
+  { id: '1', name: 'Time A', level: 'Amador' as const, players: 6, maxPlayers: 10, logo: '' },
+  { id: '2', name: 'Time B', level: 'Semi-Pro' as const, players: 7, maxPlayers: 10, logo: '' },
+  { id: '3', name: 'Time C', level: 'Profissional' as const, players: 9, maxPlayers: 10, logo: '' },
+  { id: '4', name: 'Time D', level: 'Amador' as const, players: 5, maxPlayers: 10, logo: '' },
 ]
 
 export default function HomePage() {
@@ -50,7 +50,7 @@ export default function HomePage() {
         {/* Hero Text */}
         <div className="max-w-4xl mx-auto text-center mt-12 mb-4 relative z-10 px-4">
           <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
-            Agende agora seu horário, localize um adversário e vai pra cima!
+            Agende sua quadra e encontre adversários em uma plataforma simples.
           </h1>
         </div>
 
@@ -114,15 +114,15 @@ export default function HomePage() {
           team={{
             name: team.name,
             level: team.level,
-            wins: 17,
-            winStreak: 4,
-            balance: { wins: 17, draws: 6, losses: 9 },
+            wins: 0,
+            winStreak: 0,
+            balance: { wins: 0, draws: 0, losses: 0 },
             players: team.players,
             maxPlayers: team.maxPlayers,
           }}
           match={{
-            arena: 'Arena Zona Sul',
-            address: 'Rua Domingos de Moraais, 1234, Vila Mariana, São Paulo - SP',
+            arena: 'Quadra Modelo',
+            address: 'Rua Exemplo, 123',
             time: 'Hoje, às 20:00',
           }}
         />

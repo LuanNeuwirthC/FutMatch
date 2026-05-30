@@ -11,9 +11,9 @@ const upcomingGames = [
   {
     id: '1',
     type: 'challenge',
-    opponent: 'United Team',
-    arena: 'Arena Zona Sul',
-    address: 'Vila Mariana, São Paulo - SP',
+    opponent: 'Time A',
+    arena: 'Quadra Modelo',
+    address: 'Rua Exemplo, 123',
     date: 'Hoje',
     time: '20:00',
     level: 'Semi-Pro',
@@ -21,8 +21,8 @@ const upcomingGames = [
   {
     id: '2',
     type: 'booking',
-    arena: 'Arena Street Fut7',
-    address: 'Cidade Industrial de Curitiba, Curitiba - PR',
+    arena: 'Quadra B',
+    address: 'Rua Exemplo, 200',
     date: 'Sexta-feira, 20/02',
     time: '19:00',
   },
@@ -31,14 +31,14 @@ const upcomingGames = [
 const pastGames = [
   {
     id: '3',
-    opponent: 'Fúria FC',
+    opponent: 'Time B',
     result: 'Vitória',
     score: '3 x 1',
     date: '15/02/2026',
   },
   {
     id: '4',
-    opponent: 'Galácticos',
+    opponent: 'Time C',
     result: 'Derrota',
     score: '2 x 4',
     date: '10/02/2026',

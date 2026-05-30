@@ -10,12 +10,12 @@ import { Button } from '@/components/ui/button'
 
 // Dados mockados das quadras
 const allCourts = [
-  { id: '1', name: 'Arena Central', location: 'São Paulo - SP', address: 'Av. Paulista, 1000', rating: 4.9, price: 95, image: 'https://images.unsplash.com/photo-1624880357913-a8539238245b?w=400&h=300&fit=crop' },
-  { id: '2', name: 'Grama Premium', location: 'Rio de Janeiro - RJ', address: 'Rua Copacabana, 500', rating: 4.8, price: 120, image: 'https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=400&h=300&fit=crop' },
-  { id: '3', name: 'Soccer Zone', location: 'Belo Horizonte - MG', address: 'Av. Afonso Pena, 2000', rating: 4.7, price: 80, image: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=400&h=300&fit=crop' },
-  { id: '4', name: 'Arena Praiana', location: 'Salvador - BA', address: 'Rua da Praia, 100', rating: 4.9, price: 110, image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop' },
-  { id: '5', name: 'Arena Street Fut7', location: 'Curitiba - PR', address: 'R. Nossa Sra da Cabeça, 1845', rating: 4.6, price: 95, image: 'https://images.unsplash.com/photo-1459865264687-595d652de67e?w=400&h=300&fit=crop' },
-  { id: '6', name: 'Campo Society', location: 'Porto Alegre - RS', address: 'Av. Ipiranga, 3000', rating: 4.5, price: 85, image: 'https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=400&h=300&fit=crop' },
+  { id: '1', name: 'Quadra A', location: 'Região Central', address: 'Rua Exemplo, 100', rating: 4.9, price: 95, image: 'https://images.unsplash.com/photo-1624880357913-a8539238245b?w=400&h=300&fit=crop' },
+  { id: '2', name: 'Quadra B', location: 'Região Sul', address: 'Av. Modelo, 200', rating: 4.8, price: 120, image: 'https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=400&h=300&fit=crop' },
+  { id: '3', name: 'Quadra C', location: 'Região Norte', address: 'Rua Demo, 300', rating: 4.7, price: 80, image: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=400&h=300&fit=crop' },
+  { id: '4', name: 'Quadra D', location: 'Região Leste', address: 'Av. Teste, 400', rating: 4.9, price: 110, image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop' },
+  { id: '5', name: 'Quadra E', location: 'Região Oeste', address: 'Rua Exemplo, 500', rating: 4.6, price: 95, image: 'https://images.unsplash.com/photo-1459865264687-595d652de67e?w=400&h=300&fit=crop' },
+  { id: '6', name: 'Quadra F', location: 'Região Leste', address: 'Av. Modelo, 600', rating: 4.5, price: 85, image: 'https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=400&h=300&fit=crop' },
 ]
 
 export default function QuadrasPage() {

@@ -16,7 +16,7 @@ const scheduleData = [
     label: 'Amanhã',
     slots: [
       { time: '09:00', isAvailable: true },
-      { time: '09:00 às 10:00', isAvailable: false, isBooked: true, bookedInfo: { teamName: 'Futmatch', timeRange: '19:00 às 20:00' } },
+      { time: '09:00 às 10:00', isAvailable: false, isBooked: true, bookedInfo: { teamName: 'Time A', timeRange: '19:00 às 20:00' } },
       { time: '10:00', isAvailable: true },
       { time: '11:00', isAvailable: true },
       { time: '12:00', isAvailable: true },
@@ -25,7 +25,7 @@ const scheduleData = [
   },
   {
     date: 'sábado, 21/02/2026',
-    label: 'Amanhã',
+    label: 'Fim de semana',
     slots: [
       { time: '09:00', isAvailable: true },
       { time: '10:00', isAvailable: true },
@@ -55,15 +55,15 @@ export default function CourtPage() {
           <ChevronRight className="w-4 h-4" />
           <Link href="/quadras" className="hover:text-white">Buscar Quadra</Link>
           <ChevronRight className="w-4 h-4" />
-          <span className="text-white">Arena Street Fut7</span>
+          <span className="text-white">Quadra Modelo</span>
         </nav>
 
         {/* Cabeçalho da quadra */}
         <section className="mb-6">
           <h1 className="text-2xl md:text-3xl font-bold text-white mb-3">
-            Arena Street Fut7 <span className="text-white/70 font-normal">- Quadra de Futebol Sintético</span>
+            Quadra Modelo <span className="text-white/70 font-normal">- Quadra de Treino</span>
           </h1>
-          
+
           {/* Badge Google Places */}
           <Badge className="bg-primary text-white text-sm mb-3">
             G Google Places
@@ -84,7 +84,7 @@ export default function CourtPage() {
           {/* Endereço */}
           <div className="flex items-center gap-2 text-white/80">
             <MapPin className="w-4 h-4 text-primary" />
-            <span>R. Nossa Sra da Cabeça, 1845 - Cidade Industrial de Curitiba, Curitiba - PR</span>
+            <span>Rua Exemplo, 123 - Região Central</span>
           </div>
         </section>
 
@@ -115,8 +115,8 @@ export default function CourtPage() {
           <div className="flex items-start gap-3">
             <MapPin className="w-5 h-5 text-primary mt-0.5" />
             <div>
-              <p className="font-semibold text-card-foreground">Arena Street Fut7</p>
-              <p className="text-sm text-muted-foreground">R. Nossa Sra da Cabeça, 1845, Cidade Industrial de Curitiba, Curitiba - PR</p>
+              <p className="font-semibold text-card-foreground">Quadra Modelo</p>
+              <p className="text-sm text-muted-foreground">Rua Exemplo, 123 - Região Central</p>
             </div>
           </div>
         </div>
@@ -177,8 +177,8 @@ export default function CourtPage() {
         booking={{
           date: 'Sexta-feira, 20 de fevereiro de 2026',
           time: '19:00',
-          arena: 'Arena Street Fut7',
-          address: 'R. Nossa Sra da Cabeça, 1845, Cidade Industrial de Curitiba, Curitiba - PR',
+          arena: 'Quadra Modelo',
+          address: 'Rua Exemplo, 123 - Região Central',
           duration: 60,
           price: 95,
           credits: 0,

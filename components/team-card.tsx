@@ -16,11 +16,10 @@ interface TeamCardProps {
 
 // Card de time aguardando desafio
 export function TeamCard({ id, name, level, players, maxPlayers, logo, onChallenge }: TeamCardProps) {
-  // Cores baseadas no nível do time
   const levelColors = {
     'Amador': 'bg-primary/20 text-primary border-primary/30',
     'Semi-Pro': 'bg-gray-200 text-gray-700 border-gray-300',
-    'Profissional': 'bg-primary/20 text-primary border-primary/30'
+    'Profissional': 'bg-yellow-100 text-yellow-700 border-yellow-300'
   }
   
   return (
@@ -58,23 +57,15 @@ export function TeamCard({ id, name, level, players, maxPlayers, logo, onChallen
 
 // Logo placeholder baseado no nome do time
 function TeamLogo({ name }: { name: string }) {
-  const colors: Record<string, string> = {
-    'Fúria FC': '#8B0000',
-    'United Team': '#1a1a2e',
-    'Galácticos': '#1a3a5c',
-    'Vila FC': '#2d1a4a'
-  }
-  
-  const bgColor = colors[name] || '#1a5f3c'
-  
+  const initials = name
+    .split(' ')
+    .map((word) => word[0])
+    .join('')
+    .slice(0, 3)
+
   return (
-    <svg viewBox="0 0 60 60" className="w-full h-full">
-      <rect width="60" height="60" fill={bgColor} rx="8" />
-      <circle cx="30" cy="25" r="10" fill="white" opacity="0.9" />
-      <path d="M30 20 L33 28 L27 28 Z" fill={bgColor} />
-      <text x="30" y="50" textAnchor="middle" fontSize="8" fill="white" fontWeight="bold">
-        {name.split(' ')[0].slice(0, 6).toUpperCase()}
-      </text>
-    </svg>
+    <div className="w-full h-full flex items-center justify-center bg-primary text-white text-sm font-bold rounded-lg">
+      {initials}
+    </div>
   )
 }

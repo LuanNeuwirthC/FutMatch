@@ -20,12 +20,12 @@ export default function ChallengePage() {
           {/* Lado esquerdo - Time a ser desafiado */}
           <div className="flex-1 flex flex-col items-center">
             <h1 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">
-              Desafiar United Team
+              Desafiar Time A
             </h1>
             
             {/* Logo grande do time */}
             <div className="w-48 h-48 md:w-64 md:h-64 mb-6">
-              <UnitedTeamLogo />
+              <GenericLogo />
             </div>
             
             {/* Badge do nível */}
@@ -56,9 +56,9 @@ export default function ChallengePage() {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5" />
                 <div>
-                  <p className="font-semibold text-card-foreground">Arena Zona Sul</p>
-                  <p className="text-sm text-muted-foreground">Rua Domingos de Moraais, 1234</p>
-                  <p className="text-sm text-muted-foreground">Vila Mariana, São Paulo - SP</p>
+                  <p className="font-semibold text-card-foreground">Quadra Modelo</p>
+                  <p className="text-sm text-muted-foreground">Rua Exemplo, 123</p>
+                  <p className="text-sm text-muted-foreground">Região Central</p>
                 </div>
               </div>
 
@@ -80,11 +80,11 @@ export default function ChallengePage() {
                 {/* Info do time */}
                 <div className="flex items-center gap-3">
                   <div className="w-16 h-16 rounded-xl overflow-hidden">
-                    <UnitedTeamLogoSmall />
+                    <GenericLogoSmall />
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="font-bold text-card-foreground">United Team</span>
+                      <span className="font-bold text-card-foreground">Time A</span>
                       <Badge variant="outline" className="text-xs bg-gray-200 text-gray-700">
                         Semi-Pro
                       </Badge>
@@ -92,10 +92,10 @@ export default function ChallengePage() {
                     <div className="flex items-center gap-4 mt-1 text-sm">
                       <span className="flex items-center gap-1">
                         <Trophy className="w-4 h-4 text-yellow-500" />
-                        <strong>17</strong> Vitórias
+                        <strong>3</strong> Vitórias
                       </span>
                       <span className="text-muted-foreground">
-                        <strong>4</strong> Vitórias Seguidas
+                        <strong>1</strong> Vitórias Seguidas
                       </span>
                     </div>
                   </div>
@@ -108,9 +108,9 @@ export default function ChallengePage() {
                     <span className="text-muted-foreground">Nível Semi-Pro</span>
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    Saldo <strong className="text-card-foreground">17</strong> V 
-                    · <strong className="text-card-foreground">6</strong> E 
-                    · <strong className="text-card-foreground">9</strong> D
+                    Saldo <strong className="text-card-foreground">3</strong> V 
+                    · <strong className="text-card-foreground">1</strong> E 
+                    · <strong className="text-card-foreground">2</strong> D
                   </div>
                 </div>
 
@@ -148,65 +148,37 @@ export default function ChallengePage() {
   )
 }
 
-// Logo grande do United Team
-function UnitedTeamLogo() {
+// Logo grande genérica
+function GenericLogo() {
   return (
     <svg viewBox="0 0 200 200" className="w-full h-full drop-shadow-2xl">
-      {/* Sombra */}
       <defs>
         <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
           <feDropShadow dx="0" dy="4" stdDeviation="8" floodColor="#000" floodOpacity="0.3"/>
         </filter>
       </defs>
-      
-      {/* Escudo principal */}
-      <path
-        d="M100 15 L170 45 L170 115 Q170 165 100 185 Q30 165 30 115 L30 45 Z"
-        fill="#1a1a2e"
-        stroke="#4a4a5e"
-        strokeWidth="3"
-        filter="url(#shadow)"
-      />
-      
-      {/* Faixa vermelha */}
-      <path
-        d="M100 25 L160 50 L160 110 Q160 155 100 175 Q40 155 40 110 L40 50 Z"
-        fill="#8B0000"
-        stroke="#c41e3a"
-        strokeWidth="2"
-      />
-      
-      {/* Bola de futebol */}
-      <circle cx="100" cy="80" r="35" fill="white" stroke="#ddd" strokeWidth="2" />
-      <path d="M100 55 L85 90 L115 90 Z" fill="#1a1a2e" />
-      <path d="M70 75 L85 90 L70 105" fill="none" stroke="#ddd" strokeWidth="2" />
-      <path d="M130 75 L115 90 L130 105" fill="none" stroke="#ddd" strokeWidth="2" />
-      
-      {/* Detalhes decorativos */}
-      <path d="M60 45 L60 130" stroke="#c41e3a" strokeWidth="3" opacity="0.5" />
-      <path d="M140 45 L140 130" stroke="#c41e3a" strokeWidth="3" opacity="0.5" />
-      
-      {/* Texto */}
-      <text x="100" y="145" textAnchor="middle" fontSize="22" fill="white" fontWeight="bold" fontFamily="Arial Black">
-        UNITED
-      </text>
-      <text x="100" y="165" textAnchor="middle" fontSize="14" fill="#c0c0c0" fontWeight="bold">
-        TEAM
+      <rect x="20" y="20" width="160" height="160" rx="32" fill="#1a5f3c" filter="url(#shadow)" />
+      <circle cx="100" cy="90" r="40" fill="#ffffff" opacity="0.95" />
+      <path d="M100 60 L120 100 L80 100 Z" fill="#1a5f3c" />
+      <path d="M70 90 L90 110 L70 130" fill="none" stroke="#1a5f3c" strokeWidth="4" />
+      <path d="M130 90 L110 110 L130 130" fill="none" stroke="#1a5f3c" strokeWidth="4" />
+      <text x="100" y="160" textAnchor="middle" fontSize="24" fill="white" fontWeight="bold" fontFamily="Arial Black">
+        TIME
       </text>
     </svg>
   )
 }
 
-// Logo pequena do United Team
-function UnitedTeamLogoSmall() {
+// Logo pequena genérica
+function GenericLogoSmall() {
   return (
     <svg viewBox="0 0 80 80" className="w-full h-full">
-      <rect width="80" height="80" fill="#1a1a2e" rx="8" />
-      <path d="M40 10 L65 25 L65 55 L40 70 L15 55 L15 25 Z" fill="#8B0000" stroke="#c0c0c0" strokeWidth="2" />
-      <circle cx="40" cy="35" r="12" fill="white" />
-      <path d="M40 28 L35 40 L45 40 Z" fill="#1a1a2e" />
-      <text x="40" y="60" textAnchor="middle" fontSize="8" fill="white" fontWeight="bold">UNITED</text>
-      <text x="40" y="68" textAnchor="middle" fontSize="6" fill="#c0c0c0">TEAM</text>
+      <rect width="80" height="80" fill="#1a5f3c" rx="16" />
+      <circle cx="40" cy="30" r="18" fill="#ffffff" opacity="0.95" />
+      <path d="M40 20 L50 38 L30 38 Z" fill="#1a5f3c" />
+      <text x="40" y="62" textAnchor="middle" fontSize="10" fill="white" fontWeight="bold">
+        TA
+      </text>
     </svg>
   )
 }

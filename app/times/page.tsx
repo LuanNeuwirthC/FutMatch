@@ -11,12 +11,12 @@ import { Badge } from '@/components/ui/badge'
 
 // Dados mockados dos times
 const allTeams = [
-  { id: '1', name: 'Fúria FC', level: 'Amador' as const, players: 8, maxPlayers: 10, wins: 12, winStreak: 2 },
-  { id: '2', name: 'United Team', level: 'Semi-Pro' as const, players: 9, maxPlayers: 10, wins: 17, winStreak: 4 },
-  { id: '3', name: 'Galácticos', level: 'Amador' as const, players: 7, maxPlayers: 10, wins: 8, winStreak: 1 },
-  { id: '4', name: 'Vila FC', level: 'Profissional' as const, players: 10, maxPlayers: 10, wins: 25, winStreak: 6 },
-  { id: '5', name: 'Thunder FC', level: 'Semi-Pro' as const, players: 9, maxPlayers: 10, wins: 15, winStreak: 3 },
-  { id: '6', name: 'Atlético Bairro', level: 'Amador' as const, players: 8, maxPlayers: 10, wins: 5, winStreak: 0 },
+  { id: '1', name: 'Time A', level: 'Amador' as const, players: 6, maxPlayers: 10, wins: 3, winStreak: 1 },
+  { id: '2', name: 'Time B', level: 'Semi-Pro' as const, players: 8, maxPlayers: 10, wins: 5, winStreak: 2 },
+  { id: '3', name: 'Time C', level: 'Profissional' as const, players: 9, maxPlayers: 10, wins: 7, winStreak: 3 },
+  { id: '4', name: 'Time D', level: 'Amador' as const, players: 5, maxPlayers: 10, wins: 2, winStreak: 0 },
+  { id: '5', name: 'Time E', level: 'Semi-Pro' as const, players: 7, maxPlayers: 10, wins: 4, winStreak: 1 },
+  { id: '6', name: 'Time F', level: 'Amador' as const, players: 6, maxPlayers: 10, wins: 1, winStreak: 0 },
 ]
 
 export default function TimesPage() {
@@ -121,8 +121,8 @@ export default function TimesPage() {
             maxPlayers: selectedTeam.maxPlayers,
           }}
           match={{
-            arena: 'Arena Zona Sul',
-            address: 'Rua Domingos de Moraais, 1234, Vila Mariana, São Paulo - SP',
+            arena: 'Quadra Modelo',
+            address: 'Rua Exemplo, 123',
             time: 'Hoje, às 20:00',
           }}
         />
@@ -133,25 +133,15 @@ export default function TimesPage() {
 
 // Logo placeholder do time
 function TeamLogo({ name }: { name: string }) {
-  const colors: Record<string, string> = {
-    'Fúria FC': '#8B0000',
-    'United Team': '#1a1a2e',
-    'Galácticos': '#1a3a5c',
-    'Vila FC': '#2d1a4a',
-    'Thunder FC': '#1a4a3a',
-    'Atlético Bairro': '#4a3a1a'
-  }
-  
-  const bgColor = colors[name] || '#1a5f3c'
-  
+  const initials = name
+    .split(' ')
+    .map((word) => word[0])
+    .join('')
+    .slice(0, 3)
+
   return (
-    <svg viewBox="0 0 60 60" className="w-full h-full">
-      <rect width="60" height="60" fill={bgColor} rx="8" />
-      <circle cx="30" cy="25" r="10" fill="white" opacity="0.9" />
-      <path d="M30 20 L33 28 L27 28 Z" fill={bgColor} />
-      <text x="30" y="50" textAnchor="middle" fontSize="7" fill="white" fontWeight="bold">
-        {name.split(' ')[0].slice(0, 7).toUpperCase()}
-      </text>
-    </svg>
+    <div className="w-full h-full flex items-center justify-center bg-primary text-white text-sm font-bold rounded-lg">
+      {initials}
+    </div>
   )
 }

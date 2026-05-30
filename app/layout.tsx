@@ -6,8 +6,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'Futmatch - Agende seu jogo de futebol',
-  description: 'Agendador dinâmico de jogos de times de futebol. Encontre quadras e adversários.',
+  title: 'FutMatch',
+  description: 'Plataforma de agendamento esportivo com interface genérica e funcionamento básico.',
 }
 
 export const viewport: Viewport = {
@@ -24,7 +24,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="bg-background">
       <body className={`${inter.variable} font-sans antialiased`}>
-        {/* Padding bottom para compensar nav mobile */}
         <div className="pb-16 md:pb-0">
           {children}
         </div>
